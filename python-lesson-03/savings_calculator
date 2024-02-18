@@ -1,0 +1,10 @@
+money_start = int(input("Enter your savings amount: "))
+savings_years = int(input("Enter years of saving: "))
+interest_rate = float(input("Enter interest rate: "))
+money_result = round(money_start*interest_rate*savings_years,2)
+
+print(f"Your savings after {savings_years} years: {money_result}")
+if money_result > 10000:
+      print ("You can afford your holiday!")
+else:
+    print ("You are too poor for a holiday!")
