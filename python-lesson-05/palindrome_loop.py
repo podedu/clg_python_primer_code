@@ -18,6 +18,7 @@ while True:
             break
         elif try_again == "no":
             print("Goodbye")
+            exit()
         else:
             print("Please enter yes or no.")    
 
