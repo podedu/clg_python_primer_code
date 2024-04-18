@@ -1,0 +1,28 @@
+import tkinter as tk
+
+class Root(tk.Tk):
+    def __init__(self):
+        super().__init__()
+        self.label_1 = tk.Label(self, text="Enter password (your favourite language): ", fg="#000000", bg="#e3aff0")
+        self.label_1.pack()
+        self.entry_0 = tk.Entry(self, show="*", bg="#c8e6cc")
+        self.entry_0.pack()
+        self.label_2 = tk.Label(self, fg="#ffffff", bg="#d45d3f")
+        self.label_2.pack()
+        self.btn = tk.Button(self, text="Submit", command=self.submit)
+        self.btn.pack()
+        self.correct_pass = "python"
+
+    def submit(self):
+        self.pswd = self.entry_0.get()
+        if self.pswd == self.correct_pass:
+            self.label_2["text"] = "Congratulations!"
+        else:
+            self.label_2["text"] = "Try again!"
+
+
+if __name__ == "__main__":
+    root = Root()
+    root["bg"] = "#d45d3f"
+    root.mainloop()
+
